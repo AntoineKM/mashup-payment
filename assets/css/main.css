@@ -1,0 +1,256 @@
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+span,
+input,
+button,
+textarea,
+select,
+option {
+  font-family: 'Figtree', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #022d40;
+  line-height: 1.25;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 64px;
+  gap: 8px;
+  max-width: 600px;
+}
+
+.title-container .title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.step {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.step:last-child {
+  margin-bottom: 64px;
+}
+
+.step .step-number {
+  border: #022d40 1px solid;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step .step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step .step-content .step-title {
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+}
+
+.step .step-content .step-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+}
+
+.step .step-content .step-card-container .step-card {
+  width: calc(33.3% - 8px);
+  border: #d9dadd 1px solid;
+  padding: 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.step .step-content .step-card-container .step-card:hover {
+  border: #94346e 1px solid;
+}
+
+.step .step-content .step-card-container .step-card.selected {
+  border: #94346e 1px solid;
+}
+
+.step .step-content .step-card-container .step-card i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.step .step-content .step-card-container .step-card span {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.step .step-content .step-size-row {
+  display: flex;
+  gap: 8px;
+}
+
+.step .step-content .step-size-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  width: 50%;
+}
+
+.step .step-content .step-size-group .step-size-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.step .step-content .step-size-group .step-size-input-container {
+  display: flex;
+  gap: 8px;
+  border: #d9dadd 1px solid;
+  border-radius: 8px;
+  padding: 8px;
+  align-items: center;
+}
+
+.step .step-content .step-size-group .step-size-input-container .step-size-input-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 500;
+  color: #022d40;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.step .step-content .step-size-group .step-size-input-container .step-size-input-button:hover {
+  background: rgba(148, 52, 110, 0.1);
+}
+
+.step .step-content .step-size-group .step-size-input-container .step-size-input-data {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.step .step-content .step-size-group .step-size-input-container .step-size-input-data .step-size-input-value,
+.step .step-content .step-size-group .step-size-input-container .step-size-input-data .step-size-input-unit {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.step .step-content .step-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.step .step-content .step-features li i {
+  color: #94346e;
+  font-weight: 900;
+}
+
+.step .step-content .step-summary-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+
+}
+
+.step .step-content .step-summary {
+  width: 100%;
+  border: #d9dadd 1px solid;
+  border-radius: 8px 8px 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.step .step-content .step-summary tr {}
+
+.step .step-content .step-summary tr th {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.step .step-content .step-summary tr td {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.step .step-content .step-summary i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.step .step-content .step-summary .step-summary-value-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.step .step-content .step-summary-button {
+  margin-top: 24px;
+  border: none;
+  background: #94346e;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
